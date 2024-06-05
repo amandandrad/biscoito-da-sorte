@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  background: linear-gradient(287.56deg, #190361 0%, #bb00ff 100%);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+main {
+  width: 42.4rem;
+  width: min(42.8rem, 90%);
+  background-color: #fff;
+  box-shadow: 0rem 2rem 5rem 0rem rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 3.4rem 6.4rem;
+  border-radius: 0.5rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+}
+
+p,
+button {
+  font-size: 1.5rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+h1,
+.screen1 p {
+  color: #34355b;
+}
+
+#cookie {
+  transition: transform 0.1s ease;
+}
+
+#cookie:hover {
+  cursor: pointer;
+  animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  25% {
+    transform: rotate(-1deg) translateX(-1px) translateY(1px);
+  }
+  50% {
+    transform: rotate(1deg) translateX(1px) translateY(-0.5px);
+  }
+  75% {
+    transform: rotate(-1deg) translateX(-1px) translateY(0.5px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+}
+
+/* screen 2 */
+
+.screen2 h1 {
+  margin-bottom: 2.2rem;
+}
+
+.screen2 p {
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  color: #000000;
+  font-size: 2.4rem;
+  background-color: #e4edf1;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0rem rgba(0, 0, 0, 0.5);
+}
+
+.cookie2 {
+  padding: 3rem 0;
+}
+
+button {
+  background-color: #ff9500;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  width: 17.4rem;
+  height: 5.2rem;
+}
+
+.button1 {
+  margin-top: 2rem;
+}
+
+button:hover {
+  background-color: #d88208fe;
+  cursor: pointer;
+}
+
+/* quando clicar na imagem do screen1 trocar a tela e fazer o <p> (mensagem) subir do rumo do biscoito ao seu devido lugar */
+
+#randomPhrase {
+  position: relative;
+  opacity: 1;
+  animation: slide-up 2s ease-out forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(150%); /* Inicie abaixo da posição visível */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0); /* Termine na posição original */
+    opacity: 1;
+  }
+}
